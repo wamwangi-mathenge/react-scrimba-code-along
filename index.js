@@ -14,9 +14,14 @@ import ReactDOM from 'react-dom'
 const greeting = "Hello!!"
 const className = "blue"
 
-const element = <h1 id="header" className={className}>{greeting}</h1>
+const element = (
+    <div>
+        <h1 id="header" className={className}>{greeting}</h1>
+        <h2>Multiple Elements</h2>
+    </div>
+)
 
-// https://babeljs.io/en/repl
+// Babel Refrerence: https://babeljs.io/en/repl
 
 ReactDOM.render(
     // What we want to display (our entire app)
