@@ -40,7 +40,7 @@ function createCard(greeting, subheader) {
     )
 }
 
-const element = (
+const fragment_element = (
     <div>
         {createCard("What are fragments?", "Let's find out!")}
         {createCard("Hello from JSX!", "Time to learn")}
@@ -48,6 +48,31 @@ const element = (
 )
 
 // Babel Refrerence: https://babeljs.io/en/repl
+
+
+// React Components
+
+// - A component must return JSX
+// - A component takes in one argument called "props", which is an object
+// - The name of the function must take in a capital letter
+
+function Card(props) {
+    return (
+        <div>
+            <h1>{props.greeting}</h1>
+            <h2>{props.subheader}</h2>
+        </div>
+    )
+}
+
+const componet_element = (
+    <div>
+        <Card greeting="This is a component" subheader="Wow"/>
+        <Card greeting="This is another component" subheader="Yikes" />
+        {Card({ greeting: "Hello from JSX!", subheader: "Time to learn"})}
+        {Card({ greeting: "What's a component?", subheader: "Let's find out!"})}
+    </div>
+)
 
 ReactDOM.render(
     // What we want to display (our entire app)
