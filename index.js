@@ -31,6 +31,22 @@ const list = (
     </div>
 )
 
+function createCard(greeting, subheader) {
+    return (
+        <React.Fragment>
+            <h1>{greeting}</h1>
+            <h2>{subheader}</h2>
+        </React.Fragment>
+    )
+}
+
+const element = (
+    <div>
+        {createCard("What are fragments?", "Let's find out!")}
+        {createCard("Hello from JSX!", "Time to learn")}
+    </div>
+)
+
 // Babel Refrerence: https://babeljs.io/en/repl
 
 ReactDOM.render(
