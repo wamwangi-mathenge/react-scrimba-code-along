@@ -11,7 +11,12 @@ import ReactDOM from 'react-dom'
 
 // JSX (JavaScript XML)
 
-const element = <h1 id="header" className="blue">Hello!</h1>
+const greeting = "Hello!!"
+const className = "blue"
+
+const element = <h1 id="header" className={className}>{greeting}</h1>
+
+// https://babeljs.io/en/repl
 
 ReactDOM.render(
     // What we want to display (our entire app)
