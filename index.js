@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import ReactDOM from 'react-dom'
 
 // Vanilla JavaScript Version
@@ -18,6 +18,16 @@ const element = (
     <div>
         <h1 id="header" className={className}>{greeting}</h1>
         <h2>Multiple Elements</h2>
+    </div>
+)
+
+const list = (
+    <div>
+        <ul id="about-me">
+            <li class="about-me-item">Name: {user.name}</li>
+            <li class="about-me-item">Position: {user.position}</li>
+            <li class="about-me-item">Hometown: {user.hometown}</li>
+        </ul>
     </div>
 )
 
